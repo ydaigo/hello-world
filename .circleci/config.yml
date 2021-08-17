@@ -7,4 +7,5 @@ jobs:
       - checkout
       - run: echo "hello world"
       - run: echo "hello world2"
+      - run: npm i -g jest
       - run: jest .
