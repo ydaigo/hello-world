@@ -9,3 +9,13 @@ jobs:
       - run: echo "hello world2"
       - run: npm i jest
       - run: npx jest 
+    test:
+     - run: echo "test"
+      
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - test
+      - build
+      
