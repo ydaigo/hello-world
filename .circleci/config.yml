@@ -8,4 +8,5 @@ jobs:
       - run: echo "hello world"
       - run: echo "hello world2"
       - run: npm i jest
+      - run: ls
       - run: npx jest .
