@@ -9,8 +9,15 @@ jobs:
       - run: echo "hello world2"
       - run: npm i jest
       - run: npx jest 
-    test:
-     - run: echo "test"
+  test:
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - run: echo "hello world"
+      - run: echo "hello world2"
+      - run: npm i jest
+      - run: npx jest 
       
 workflows:
   version: 2
