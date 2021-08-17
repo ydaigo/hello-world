@@ -5,8 +5,7 @@ jobs:
       - image: circleci/node:12
     steps:
       - checkout
-      - run: echo "hello world"
-      - run: echo "hello world2"
+      - run: echo "hello build"
       - run: npm i jest
       - run: npx jest 
   test:
@@ -14,15 +13,14 @@ jobs:
       - image: circleci/node:12
     steps:
       - checkout
-      - run: echo "hello world"
-      - run: echo "hello world2"
-      - run: npm i jest
-      - run: npx jest 
+      - run: echo "hello test"
       
 workflows:
   version: 2
   build_and_test:
     jobs:
       - test
+        requires:
+          - build
       - build
       
